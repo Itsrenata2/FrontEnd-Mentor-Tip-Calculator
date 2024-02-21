@@ -75,7 +75,7 @@ const calcTipAmountAndTotal = function (bill, tip, numPeople) {
   console.log(calculatedTip);
   
   // * sum the total for each with the tip
-  total = bill + calculatedTip;
+  total = dividedBill + calculatedTip;
   console.log(total);
 
   // * update UI
