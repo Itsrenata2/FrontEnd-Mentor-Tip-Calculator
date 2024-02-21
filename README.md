@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://your-solution-url.com](https://github.com/Itsrenata2/FrontEnd-Mentor-Tip-Calculator)
+- Solution URL: [GitHub Repository](https://github.com/Itsrenata2/FrontEnd-Mentor-Tip-Calculator)
 - Live Site URL: [FrontEnd Mentor | Tip Calculator](https://front-end-mentor-tip-calculator.vercel.app/)
 
 ## My process
