@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet"> 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+                cyan: {
+                    gray: 'hsl(184, 14%, 56%)',
+                    strong: 'hsl(172, 67%, 45%)',
+                    dark: 'hsl(186, 14%, 43%)',
+                    darkest: 'hsl(183, 100%, 15%)',
+                    light: 'hsl(185, 41%, 84%)',
+                    lightest: 'hsl(189, 41%, 97%)',
+                },
+                white: 'hsl(0, 0%, 100%)',
+          },
+          fontFamily: {
+              mono: ['Space Mono', 'monospace'],
+          },
+          letterSpacing: {
+            widest: '.35em'
+          },
+          backgroundImage: {
+            'icon': "url('images/icon-dollar.svg')",
+            'person': "url('images/icon-person.svg')",
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body class="bg-cyan-light">
+  <header class="my-16 font-mono text-center text-cyan-dark font-bold text-3xl tracking-widest leading-10">
+    <h1>SPLI<br>TTER</h1>
+  </header>
+  <main class="font-mono bg-white w-full md:w-3/4 lg:w-3/5 md:m-auto rounded-t-3xl md:rounded-2xl md:mb-20">
+    <section class="p-6 md:flex md:gap-4 md:items-center justify-between">
+      <div class="md:w-1/2">
+        <h2 class="text-cyan-dark font-bold">Bill</h2>
+        <input placeholder="0" id="bill-js" class="w-full focus:outline-none focus:ring focus:ring-cyan-strong p-2 rounded mt-2 mb-5 bg-cyan-lightest bg-icon bg-no-repeat bg-[center_left_0.6rem] font-bold text-xl text-cyan-darkest caret-cyan-strong bg-cyan-lightest text-right">
+
+        <h2 class="text-cyan-dark font-bold">Select Tip %</h2>
+        <div class="btns-tip grid gap-2 grid-cols-2 grid-rows-3 mt-4 mb-6 md:grid-cols-3 md:grid-rows-2">
+          <button id="tip-btn-five" class="tip-btn-five bg-cyan-darkest text-white rounded-md p-3 font-bold md:p-2 hover:bg-cyan-strong hover:text-cyan-darkest focus:bg-cyan-strong focus:text-cyan-darkest">5%</but>
+          <button id="tip-btn-ten" class="tip-btn-ten bg-cyan-darkest text-white rounded-md p-3 font-bold md:p-2 hover:bg-cyan-strong hover:text-cyan-darkest focus:bg-cyan-strong focus:text-cyan-darkest">10%</button>
+          <button id="tip-btn-fifteen" class="tip-btn-fifteen bg-cyan-darkest text-white rounded-md p-3 font-bold md:p-2 hover:bg-cyan-strong hover:text-cyan-darkest focus:bg-cyan-strong focus:text-cyan-darkest">15%</button>
+          <button id="tip-btn-twenty-five" class="tip-btn-twenty-five bg-cyan-darkest text-white rounded-md p-3 font-bold md:p-2 hover:bg-cyan-strong hover:text-cyan-darkest focus:bg-cyan-strong focus:text-cyan-darkest">25%</button>
+          <button id="tip-btn-fifty" class="tip-btn-fifty bg-cyan-darkest text-white rounded-md p-3 font-bold md:p-2 hover:bg-cyan-strong hover:text-cyan-darkest focus:bg-cyan-strong focus:text-cyan-darkest">50%</button>
+          <input placeholder="Custom" class="custom-js w-full rounded-md focus:outline-none focus:ring focus:ring-cyan-strong text-center placeholder-cyan-darkest text-cyan-darkest font-bold caret-cyan-strong">
+        </div>
+
+        <h2 class="text-cyan-dark font-bold">Number of People</h2>
+        <input placeholder="0" class="number-people-js w-full focus:outline-none focus:ring focus:ring-cyan-strong p-2 rounded mt-2 mb-5 bg-cyan-lightest bg-person bg-no-repeat bg-[center_left_0.6rem] font-bold text-xl text-cyan-darkest caret-cyan-strong bg-cyan-lightest text-right">
+      </div>
+      
+      <div class="md:w-1/2 md:size-full">
+        <div class="bg-cyan-darkest rounded-xl py-7 px-5 md:h-80 md:grow md:flex md:flex-col md:justify-between">
+          <div class="md:flex md:flex-col md:justify-between md:py-5 md:px-2">
+            <div class="flex items-center justify-between pb-5 md:pb-10">
+              <div>
+                <h2 class="text-cyan-lightest md:text-xs">Tip Amount</h2>
+                <p class="text-cyan-gray md:text-xs">/ person</p>
+              </div>
+              <div>
+                <p class="tip-amount text-cyan-strong text-3xl">$0.00</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pb-5">
+              <div>
+                <h2 class="text-cyan-lightest md:text-xs">Total</h2>
+                <p class="text-cyan-gray md:text-xs">/ person</p>
+              </div>
+              <div>
+                <p class="total-tip text-cyan-strong text-3xl">$0.00</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="reset-btn hover:bg-cyan-light font-bold bg-cyan-strong uppercase text-cyan-darkest rounded-md w-full p-2">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- <div class="text-xs text-center">
+    Challenge by <a class="text-blue-700" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="text-blue-700" href="#">Renata Silva</a>.
+  </div> -->
+  <script src="main.js"></script>
+</body>
+</html>
