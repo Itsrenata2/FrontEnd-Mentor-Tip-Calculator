@@ -10,7 +10,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -30,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [GitHub Repository](https://your-solution-url.com](https://github.com/Itsrenata2/FrontEnd-Mentor-Tip-Calculator)
 - Live Site URL: [FrontEnd Mentor | Tip Calculator](https://front-end-mentor-tip-calculator.vercel.app/)
 
 ## My process
