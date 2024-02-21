@@ -21,7 +21,8 @@ let total = 0;
 // * bill
 billInput.addEventListener("input", function (e) {
   billValue = parseFloat(e.target.value);
-  console.log(billValue);
+  
+  calcTipAmountAndTotal(billValue, numberTip, numberPeopleValue);
 });
 
 // * tip
@@ -33,7 +34,8 @@ const btnPressed = (e) => {
   if (textBtn.length <= 2) {
     numberTip = textBtn.slice(0, 1);
   }
-  console.log(numberTip);
+  
+  calcTipAmountAndTotal(billValue, numberTip, numberPeopleValue);
 };
 
 for (let btn of tipsBtn) {
@@ -43,13 +45,11 @@ for (let btn of tipsBtn) {
 // * custom tip
 customTip.addEventListener("input", function (e) {
   customTipValue = Number(e.target.value);
-  console.log(customTipValue);
 });
 
 // * number of people
 numPeopleInput.addEventListener("input", function (e) {
   numberPeopleValue = parseInt(e.target.value);
-  console.log(numberPeopleValue);
 
   calcTipAmountAndTotal(billValue, numberTip, numberPeopleValue);
 });
@@ -68,15 +68,12 @@ const calcTipAmountAndTotal = function (bill, tip, numPeople) {
 
   // * divide the bill by the number of people
   dividedBill = bill / numPeople;
-  console.log(dividedBill);
 
   // * take the percentage of the tip and multiply by the total for each
   calculatedTip = (dividedBill * Number(tip)) / 100;
-  console.log(calculatedTip);
   
   // * sum the total for each with the tip
   total = dividedBill + calculatedTip;
-  console.log(total);
 
   // * update UI
   tipAmountText.textContent = `$ ${calculatedTip.toFixed(2)}`;
