@@ -85,8 +85,8 @@ resetBtn.addEventListener("click", function (e) {
   e.preventDefault;
 
   // * reset the input values
-  billInput.value = "0";
-  numPeopleInput.value = "0";
+  billInput.value = "";
+  numPeopleInput.value = "";
   customTip.value = "Custom";
 
   // * reset results
